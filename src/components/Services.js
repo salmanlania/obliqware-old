@@ -21,17 +21,17 @@ const Services = () => {
 
     const cards = [
         {
-            image: img4,
+            image: img,
             cardTitle: 'Web App Development',
             desc: webDesc,
         },
         {
-            image: img4,
+            image: img2,
             cardTitle: 'Mobile App Development',
             desc: mobileDesc,
         },
         {
-            image: img4,
+            image: img3,
             cardTitle: 'Artificial Intelligence Solutions',
             desc: aiDesc,
         },
