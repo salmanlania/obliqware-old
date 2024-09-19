@@ -1,67 +1,90 @@
-import React from 'react';
-import img from '../images/web.svg'; 
+import React, {useEffect} from 'react';
+import img from '../images/web.svg';
 import img2 from '../images/app.svg';
 import img3 from '../images/hosting.svg';
 import img4 from '../images/consultation.svg';
+import ServiceCard from './ServiceCard';
 
 const Services = () => {
+
+    const webDesc = 'Our team builds dynamic and responsive web applications that enhance user engagement and drive business success. From robust e-commerce platforms to efficient internal tools, we tailor each solution to meet your unique needs.';
+
+    const mobileDesc = 'We create innovative, user-friendly mobile apps designed to help your business thrive in today’s fast-paced digital landscape. Whether it’s iOS or Android, our team delivers seamless and scalable solutions that bring your vision to life.';
+
+    const aiDesc = 'Harness the power of AI with Obliqware. Our AI-driven solutions streamline processes, optimize decision-making, and unlock new opportunities for growth and efficiency, keeping your business ahead of the curve.';
+
+    const uiUxDesgin = 'We design clean, user-friendly interfaces that make navigating your app or website a breeze. Our focus is on creating experiences that not only look great but also feel natural for users, ensuring they enjoy every interaction with your product.';
+   
+    const gdDesc = 'We provide creative and impactful graphic design services that resonate with your audience. From logos to marketing materials, our designs are crafted to communicate your brand’s story effectively.';
+
+    const otherDesc = 'At Obliqware, we offer a range of services, from software consulting to system integration. Whatever your business challenge, we’re here to provide solutions that fit.';
+
+    const cards = [
+        {
+            image: img4,
+            cardTitle: 'Web App Development',
+            desc: webDesc,
+        },
+        {
+            image: img4,
+            cardTitle: 'Mobile App Development',
+            desc: mobileDesc,
+        },
+        {
+            image: img4,
+            cardTitle: 'Artificial Intelligence Solutions',
+            desc: aiDesc,
+        },
+        {
+            image: img4,
+            cardTitle: 'UI/UX Design',
+            desc: uiUxDesgin,
+        },
+        {
+            image: img4,
+            cardTitle: 'Graphic Design',
+            desc: gdDesc,
+        },
+        {
+            image: img4,
+            cardTitle: 'Specialized Offerings',
+            desc: otherDesc,
+        },
+    ]
+
+    useEffect(() => {
+        document.title = 'Obliqware';
+    }, []);
 
     return (
         <div id="services" className="bg-gray-100 py-12" >
             <section data-aos="zoom-in-down">
-                    <div className="my-4 py-4">
-                        <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">services</h2>
-                        
-                        <div className='flex justify-center'>
-                            <div className='w-24 border-b-4 border-blue-900'></div>
-                        </div>
-                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">We are deeply committed to the growth and success of our clients.</h2>
+                <div className="my-4 py-4">
+                    <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">services</h2>
+
+                    <div className='flex justify-center'>
+                        <div className='w-24 border-b-4 border-blue-900'></div>
                     </div>
+                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">We are deeply committed to the growth and success of our clients.</h2>
+                </div>
 
-                    <div className="px-12" data-aos="fade-down" data-aos-delay="600">
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                            
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Web Development</h2>
-                                    <p className="text-md font-medium">
-                                        We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.
-                                    </p>
-                                </div>
-                            </div>
+                <div className="px-12" data-aos="fade-down" data-aos-delay="600">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Mobile App Development</h2>
-                                    <p className="text-md font-medium">
-                                        We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                    <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">Domain and Hosting Services</h2>
-                                    <p className="text-md font-medium">
-                                        We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-                                <div className="m-2 text-justify text-sm">
-                                <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">General IT Consultations</h2>
-                                    <p className="text-md font-medium">
-                                        Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions.
-                                    </p>
-                                </div>
-                            </div>                    
-                        </div>
+                        {
+                            cards.map((card, index) => {
+                                return (
+                                    <ServiceCard
+                                        key={index}
+                                        image={card.image}
+                                        title={card.cardTitle}
+                                        description={card.desc}
+                                    />
+                                )
+                            })
+                        }
                     </div>
+                </div>
             </section>
 
             <section>
@@ -75,7 +98,7 @@ const Services = () => {
                             font-bold">We <span className='font-black'>Build</span></h3>
                             <div>
                                 <p className='my-3 text-xl text-gray-600 font-semibold'>
-                                    With over 10 years experience in software analysis and design and a deep understanding of the latest IT trends and solutions, we provide customized recommendations and strategies to help you improve your operations, reduce costs, and increase efficiency.
+                                    With a keen understanding of the latest IT trends and solutions, we offer tailored recommendations and strategies to enhance your operations, reduce costs, and boost efficiency.
                                 </p>
                             </div>
                         </div>
@@ -85,7 +108,7 @@ const Services = () => {
                             </div>
                             <h3 className="text-3xl  text-blue-900 font-bold">We <span className='font-black'>Collaborate</span></h3>
                             <div>
-                                <p className='my-3 text-xl text-gray-600 font-semibold'>We can collaborate with your existing tech team to scale existing software applications or design customized software applications that suits your everyday need and simplifies various processes.</p>
+                                <p className='my-3 text-xl text-gray-600 font-semibold'>We work alongside you to enhance your existing software or create custom applications that simplify your everyday processes.</p>
                             </div>
                         </div>
                     </div>
