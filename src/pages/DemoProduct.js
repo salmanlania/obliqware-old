@@ -424,7 +424,7 @@ const DemoProduct = (props) => {
 
         try {
             const response = await axios.post(
-                'https://obliqware-website-demo-product-api.onrender.com', // Directly using the API URL
+                'https://obliqware-website-demo-product-api.vercel.app/', // Directly using the API URL
                 fData,
                 {
                     headers: {

@@ -1,8 +1,14 @@
 import React, {useEffect} from 'react';
-import img from '../images/web.svg';
-import img2 from '../images/app.svg';
-import img3 from '../images/hosting.svg';
-import img4 from '../images/consultation.svg';
+// import img from '../images/web.svg';
+// import img2 from '../images/app.svg';
+// import img3 from '../images/hosting.svg';
+// import img4 from '../images/consultation.svg';
+import webApp from "../images/services/WebApp-illustration.png"
+import mobileApp from "../images/services/Mobile-App-illustration.png"
+import artificialIntelligence from "../images/services/Ai-solutions-illustration.png"
+import uiUxDesgining from "../images/services/ui-ux-illustration.png"
+import graphicDesign from "../images/services/graphic-design-illustration.png"
+import specializedOfferings from "../images/services/specialized-offerings-illustration.png"
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
@@ -21,32 +27,32 @@ const Services = () => {
 
     const cards = [
         {
-            image: img,
+            image: webApp,
             cardTitle: 'Web App Development',
             desc: webDesc,
         },
         {
-            image: img2,
+            image: mobileApp,
             cardTitle: 'Mobile App Development',
             desc: mobileDesc,
         },
         {
-            image: img3,
+            image: artificialIntelligence,
             cardTitle: 'Artificial Intelligence Solutions',
             desc: aiDesc,
         },
         {
-            image: img4,
+            image: uiUxDesgining,
             cardTitle: 'UI/UX Design',
             desc: uiUxDesgin,
         },
         {
-            image: img4,
+            image: graphicDesign,
             cardTitle: 'Graphic Design',
             desc: gdDesc,
         },
         {
-            image: img4,
+            image: specializedOfferings,
             cardTitle: 'Specialized Offerings',
             desc: otherDesc,
         },
