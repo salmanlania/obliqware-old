@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 // import img from '../images/web.svg';
 // import img2 from '../images/app.svg';
 // import img3 from '../images/hosting.svg';
-// import img4 from '../images/consultation.svg';
+import img4 from '../images/consultation.svg';
 import webApp from "../images/services/WebApp-illustration.png"
 import mobileApp from "../images/services/Mobile-App-illustration.png"
 import artificialIntelligence from "../images/services/Ai-solutions-illustration.png"
